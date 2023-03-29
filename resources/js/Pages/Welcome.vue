@@ -60,7 +60,7 @@ defineProps({
 
 
                         <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Plantilla de Proyectos <span style="color: grey">Versión 1.0.0</span></h2>
-
+                        <v-divider></v-divider>
                         <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                             Paquetes incluidos en esta plantilla son los siguientes
                         </p>
@@ -86,6 +86,12 @@ defineProps({
                         </div>
                         <h5 class="text-white">Ejemplos</h5>
                         <div class="text-gray-500">
+                            &nbsp;<strong class="text-green">Credenciales de Acceso</strong>
+                            <br>
+                            <v-chip-group>
+                                <v-chip>proto@taag-genetics.com</v-chip><br>
+                                <v-chip>proto247</v-chip>
+                            </v-chip-group>
                             &nbsp;<strong class="text-green">Api</strong>
                             <p>localhost/api/session/user</p>
                             <p>localhost/api/session/login</p>
@@ -104,6 +110,14 @@ defineProps({
                                 <li>Docker</li>
                             </ul>
                         </div>
+                        <v-alert
+                            color="#2A3B4D"
+                            theme="dark"
+                            icon="mdi-alert-circle-outline"
+                            density="compact"
+                        >
+                            Recuerde actualizar la contraseña después del primer inicio
+                        </v-alert>
                     </div>
                 </div>
             </div>
