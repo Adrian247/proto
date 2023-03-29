@@ -25,7 +25,7 @@ class UserApiController extends Controller
     public function index(): JsonResponse
     {
         $users = User::all();
-        if (!$users ) {
+        if ($users->count() === 0) {
             return response()->json(
                 ['message' => 'Not users found'],
                 404
@@ -34,8 +34,7 @@ class UserApiController extends Controller
 
         $users->makeHidden($this->hiddenFields(['uuid']));
         return response()->json($users);
-    }//end index()
-
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -46,7 +45,7 @@ class UserApiController extends Controller
     public function store(Request $request): JsonResponse
     {
         return $this->setUser($request);
-    }//end store()
+    }
 
     /**
      * Display the specified resource.
@@ -66,7 +65,7 @@ class UserApiController extends Controller
 
         $user->makeHidden($this->hiddenFields());
         return response()->json($user);
-    }//end show()
+    }
 
     /**
      * Update the specified resource in storage by uuid.
@@ -78,7 +77,7 @@ class UserApiController extends Controller
     public function update(Request $request, string $uuid): JsonResponse
     {
         return $this->setUser($request, $uuid);
-    }//end update()
+    }
 
     /**
      * Remove item from uuid
@@ -103,14 +102,14 @@ class UserApiController extends Controller
             ['message' => 'User deleted'],
             204
         );
-    }//end destroy()
+    }
 
     /**
      * @param  Request                  $request Request given from client
      * @param  $uuid | Unique Identifier
      * @return JsonResponse Json response
      */
-    private function setUser(Request $request, $uuid = null): JsonResponse
+    private function setUser(Request $request, string|null $uuid = null): JsonResponse
     {
         if ($uuid === null) {
             $user      = new User();
@@ -136,7 +135,7 @@ class UserApiController extends Controller
 
         ($uuid === null) ? $this->createUser($user, $request) : $this->updateUser($user, $request);
         return response()->json($user, $stateHttp);
-    }//end setUser()
+    }
 
     /**
      * @param  User    $user Instance of user
@@ -148,7 +147,7 @@ class UserApiController extends Controller
         $user->uuid     = Str::uuid();
         $user->password = Hash::make($request->password);
         $this->updateCommonFields($user, $request, ['uuid']);
-    }//end createUser()
+    }
 
     /**
      * @param  User    $user Instance of user given
@@ -159,8 +158,7 @@ class UserApiController extends Controller
     {
         $user->password = Hash::make($request->password);
         $this->updateCommonFields($user, $request);
-    }//end updateUser()
-
+    }
 
     /**
      * @param  User    $user Instancia de usuario
@@ -174,7 +172,7 @@ class UserApiController extends Controller
         $user->email = $request->email;
         $user->makeHidden($this->hiddenFields($showFields));
         $user->save();
-    }//end updateCommonFields()
+    }
 
     /**
      * @param array $exceptions Array exceptions to show
@@ -197,5 +195,5 @@ class UserApiController extends Controller
         }
 
         return $hiddenFields;
-    }//end hiddenFields()
-}//end class
+    }
+}

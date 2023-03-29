@@ -95,6 +95,8 @@ defineProps({
                             <p>localhost/user (se requiere iniciar sesión)</p>
                             &nbsp;<strong class="text-green">Pest</strong>
                             <p>tests/Feature/Api/V1/ApiSessionTest.php</p>
+                            <strong class="text-green">QA</strong>
+                            <p>app/Http/Controllers/Api/V1/User/UserApiController.php</p>
                         </div>
                         <h5 class="text-white">Dependencias</h5>
                         <div class="text-green-600">
