@@ -59,7 +59,7 @@ defineProps({
                     <div class="scale-200 p-6 bg-dark dark:bg-gray-900/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none  focus:outline focus:outline-2 focus:outline-red-500">
 
 
-                        <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Plantilla de Proyectos <span style="color: grey">Versión 1.0.0</span></h2>
+                        <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-gray-400">Plantilla de Proyectos <span class="text-gray-600">Versión 1.0.0</span></h2>
                         <v-divider></v-divider>
                         <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                             Paquetes incluidos en esta plantilla son los siguientes
@@ -71,53 +71,46 @@ defineProps({
                             | Sanctum
                             | Vue 3
                             | Vuetify
-                            | Herramientas de Calidad (Code Sniffer, Php Cs Fixer, Mess Detector, Php Stan, Psalm)
+                            | QA (Code Sniffer, Php Cs Fixer, Mess Detector, Php Stan, Psalm)
                             | Pest
                         </p>
-                        <h5 class="text-white">Instalación</h5>
+                        <br>
+                        <h5 class="text-gray-400">Instalación</h5>
+                        <br>
                         <div class="text-gray-500">
-                            <p>vendor/bin/sail artisan command:start-project</p>
+                            <v-chip>vendor/bin/sail artisan command:start-project</v-chip>
                         </div>
-                        <h5 class="text-white">Comandos</h5>
+                        <br>
+                        <h5 class="text-gray-400">Comandos</h5>
                         <div class="text-gray-500">
                             <p>Sail: vendor/bin/sail up</p>
                             <p>Npm: vendor/bin/sail npm run dev</p>
                             <p>Composer: vendor/bin/sail composer install</p>
                         </div>
-                        <h5 class="text-white">Ejemplos</h5>
-                        <div class="text-gray-500">
-                            &nbsp;<strong class="text-green">Credenciales de Acceso</strong>
-                            <br>
-                            <v-chip-group>
-                                <v-chip>proto@taag-genetics.com</v-chip><br>
-                                <v-chip>proto247</v-chip>
-                            </v-chip-group>
-                            &nbsp;<strong class="text-green">Api</strong>
-                            <p>localhost/api/session/user</p>
-                            <p>localhost/api/session/login</p>
-                            <p>localhost/api/session/logout</p>
-                            <p>localhost/api/session/user</p>
-                            &nbsp;<strong class="text-green">Vue 3</strong>
-                            <p>localhost/user (se requiere iniciar sesión)</p>
-                            &nbsp;<strong class="text-green">Pest</strong>
-                            <p>tests/Feature/Api/V1/ApiSessionTest.php</p>
+                        <br>
+                        <h5 class="text-gray-400">Ejemplos</h5>
+                        <div class="text-gray-500 ml-2">
+                            <strong class="text-green">Api</strong>
+                            <div class="ml-2">
+                                <p>localhost/api/session/user</p>
+                                <p>localhost/api/session/login</p>
+                                <p>localhost/api/session/logout</p>
+                                <p>localhost/api/session/user</p>
+                            </div>
+                            <strong class="text-green">Vue 3</strong>
+                            <p class="ml-2">localhost/user (se requiere iniciar sesión)</p>
+                            <strong class="text-green">Pest</strong>
+                            <p class="ml-2">tests/Feature/Api/V1/ApiSessionTest.php</p>
                             <strong class="text-green">QA</strong>
-                            <p>app/Http/Controllers/Api/V1/User/UserApiController.php</p>
+                            <p class="ml-2">app/Http/Controllers/Api/V1/User/UserApiController.php</p>
                         </div>
-                        <h5 class="text-white">Dependencias</h5>
+                        <br>
+                        <h5 class="text-gray-400">Dependencias</h5>
                         <div class="text-green-600">
                             <ul style="color: grey">
                                 <li>Docker</li>
                             </ul>
                         </div>
-                        <v-alert
-                            color="#2A3B4D"
-                            theme="dark"
-                            icon="mdi-alert-circle-outline"
-                            density="compact"
-                        >
-                            Recuerde actualizar la contraseña después del primer inicio
-                        </v-alert>
                     </div>
                 </div>
             </div>
