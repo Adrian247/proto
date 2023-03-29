@@ -14,7 +14,13 @@ Plantilla de proyecto Laravel con Vue 3, componentes incluidos
 - Pest (Pruebas unitarias)
 
 ## Instalación
+Instalación para composer, se requiere para ejecutar instrucciones de sail.
+
 `docker run --rm --interactive --tty -v $(pwd):/app composer install`
+
+Ejecución de migraciones y seeders:
+
+`vendor/bin/sail artisan comman:start-project`
 
 ## Documentación de Api
 https://documenter.getpostman.com/view/17285993/2s93RRxtsU
