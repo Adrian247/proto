@@ -3,7 +3,7 @@
 
 ## Plantilla de proyectos Taag
 
-Plantilla de proyecto Laravel con Vue 3, a continuación se listan los paquetes incluidos
+Plantilla de proyecto Laravel con Vue 3, componentes incluidos
 
 - Laravel 10.
 - Sails
