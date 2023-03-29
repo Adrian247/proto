@@ -91,6 +91,7 @@ defineProps({
                         <h5 class="text-gray-400">Ejemplos</h5>
                         <div class="text-gray-500 ml-2">
                             <strong class="text-green">Api</strong>
+                            <a href="https://documenter.getpostman.com/view/17285993/2s93RRxtsU" class="text-cyan-darken-1" target="_blank">  (ver documentación) </a>
                             <div class="ml-2">
                                 <p>localhost/api/session/user</p>
                                 <p>localhost/api/session/login</p>
