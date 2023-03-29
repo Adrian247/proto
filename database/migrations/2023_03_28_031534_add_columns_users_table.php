@@ -11,7 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::table('users', static function (Blueprint $table) {
+            $table->uuid()->after('id');
+        });
     }
 
     /**
@@ -19,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::table('users', static function (Blueprint $table) {
+            $table->dropColumn('uuid');
+        });
     }
 };
