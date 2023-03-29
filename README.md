@@ -1,7 +1,7 @@
-<h1 align="center">Taag Genetics</h1>
+<h1 align="center">Prototype Project</h1>
 <p align="center">Versión 1.0.0</p>
 
-## Plantilla de proyectos Taag
+## Plantilla de proyectos
 
 Plantilla de proyecto Laravel con Vue 3, componentes incluidos
 

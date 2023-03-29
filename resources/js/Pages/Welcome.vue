@@ -51,7 +51,7 @@ defineProps({
 
         <div class="max-w-7xl mx-auto p-6 lg:p-8">
             <div class="flex justify-center">
-                <h1 class="text-white">Taag <span style="color: grey">Genetics</span></h1>
+                <h1 class="text-white">Proto <span style="color: grey">Documentation</span></h1>
             </div>
 
             <div class="mt-16">
