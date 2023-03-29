@@ -11,7 +11,7 @@ Plantilla de proyecto Laravel con Vue 3, componentes incluidos
 - Vue 3
 - Vuetify
 - Calidad (Php Cs Fixer, Code Sniffer, Mess Detector, Psalm, Php Stan)
-- Pest
+- Pest (Pruebas unitarias)
 
 ## Instalación
 `docker run --rm --interactive --tty -v $(pwd):/app composer install`
