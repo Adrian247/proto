@@ -23,7 +23,7 @@ defineProps({
                                         <v-text-field
                                             v-model="search"
                                             append-icon="mdi-magnify"
-                                            label="Buscar"
+                                            label="Search user"
                                             single-line
                                             hide-details
                                             variant="underlined"
@@ -49,22 +49,34 @@ defineProps({
 </template>
 
 <script>
+import {userToHost} from "@/Src/Mappers/UserMapper";
+
 export default {
+    created() {
+        this.mapToHost()
+    },
     data: () => ({
         search: '',
         dialog: false,
         dialogDelete: false,
         headers: [
             {
-                title: 'Nombre',
+                title: 'Name',
                 align: 'start',
                 key: 'name',
             },
             { title: 'Email', key: 'email' },
+            { title: 'Created at', key: 'createdAt' },
         ],
     }),
     computed: {},
-    methods: {},
+    methods: {
+        mapToHost() {
+            this.users.map((user,index) => {
+                this.users[index] = userToHost(user);
+            })
+        }
+    },
 }
 </script>
 

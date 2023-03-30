@@ -33,7 +33,11 @@ Route::get('/dashboard', function () {
 
 Route::get('/user', function () {
     return Inertia::render('User', [
-        'users' => User::all(),
+        'users' => User::all()->makeHidden([
+            'id',
+            'email_verified_at',
+            'updated_at'
+        ]),
     ]);
 })->middleware(['auth', 'verified'])->name('user');
 
