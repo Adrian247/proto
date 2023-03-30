@@ -9,9 +9,9 @@ export const userToHost = (user) => {
         uuid,
         name,
         email,
-        created_at
+        created_at,
     } = user;
-    // Formated contract
+    // Format contract
     return {
         uuid,
         name,
