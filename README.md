@@ -16,16 +16,17 @@ Plantilla de proyecto Laravel con Vue 3, componentes incluidos
 ## Instalación
 
 1. Ingrese al directorio del proyecto.
-2. Ejecute comando de instalación para composer, se requiere para ejecutar instrucciones de sail.
+2. Renombrar el archivo .env.example a .env (Modificarlo si es necesario)
+3. Ejecute comando de instalación para composer, se requiere para ejecutar instrucciones de sail.
 
     `docker run --rm --interactive --tty -v $(pwd):/app composer install`
-3. Ejecute de migraciones y seeders.
-`./vendor/bin/sail artisan comman:start-project`
-4. Instalar componentes
-`./vendor/bin/sail npm i`
-5. Iniciar sail
+4. Iniciar sail
 `./vendor/bin/sail up`
-6. Iniciar servidor
+5. Ejecute de migraciones y seeders.
+`./vendor/bin/sail artisan comman:start-project`
+6. Instalar componentes
+`./vendor/bin/sail npm i`
+7. Iniciar servidor
 `./vendor/bin/sail npm run dev`
 
 ## Configuración de alias
