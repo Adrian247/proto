@@ -13,11 +13,15 @@ Plantilla de proyecto Laravel con Vue 3, componentes incluidos
 - Calidad (Php Cs Fixer, Code Sniffer, Mess Detector, Psalm, Php Stan)
 - Pest (Pruebas unitarias)
 
+## Requerimientos
+
+- Docker
+
 ## Instalación
 
 1. Ingrese al directorio del proyecto.
 2. Renombrar el archivo .env.example a .env (Modificarlo si es necesario)
-3. Ejecute comando de instalación para composer, se requiere para ejecutar instrucciones de sail.
+3. Ejecute comando de instalación, se requiere para ejecutar instrucciones de sail.
 
     `docker run --rm --interactive --tty -v $(pwd):/app composer install`
 4. Iniciar sail
@@ -31,16 +35,16 @@ Plantilla de proyecto Laravel con Vue 3, componentes incluidos
 
 ## Configuración de alias
 
-En el home de su usuario, en el archivo .bashrc o .zshrc dependiendo de la terminal que esté utilizando, pegue en la sección de alias las siguientes líneas
+En el home de su usuario, en el archivo `.bashrc` o `.zshrc` dependiendo de la terminal que esté utilizando, pegue en la sección de alias las siguientes líneas
 
 `alias sail="./vendor/bin/sail"`
 
 `alias artisan="./vendor/bin/sail artisan"`
 
 Ejecute el comando `. ~/.bashrc` (ejemplo para bashrc) o inicie de nuevo su terminal para cargar los nuevos alias.
-Esto le permite abreviar la instruccion de comandos. Por ejemplo, si quisiera listar las rutas solo introduzca el comando  `artisan route:list` 
-este será el equivalente a `./vendor/bin/sail artisan route:list` ó si desea iniciar el servicio de sail
-solo seria necesario ejecutar el comando `sail up` esto sería el equivalente a `./vendor/bin/sail up"`
+Esto le permite abreviar la instruction de comandos. Por ejemplo, si quisiera listar las rutas solo introduzca el comando  `artisan route:list` 
+este será el equivalente a `./vendor/bin/sail artisan route:list` o si desea iniciar el servicio de sail
+solo sería necesario ejecutar el comando `sail up` esto sería el equivalente a `./vendor/bin/sail up"`
 
 ## Documentación de Api
 https://documenter.getpostman.com/view/17285993/2s93RRxtsU
