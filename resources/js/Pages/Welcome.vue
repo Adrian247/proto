@@ -67,7 +67,7 @@ defineProps({
                         <p style="color: grey">
                             Laravel 10
                             | Php 8.1
-                            | Sails
+                            | Sail
                             | Sanctum
                             | Vue 3
                             | Vuetify
