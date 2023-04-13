@@ -50,10 +50,14 @@ defineProps({
 
 <script>
 import {userToHost} from "@/Src/Mappers/UserMapper";
+import {VDataTable} from "vuetify/labs/components";
 
 export default {
     created() {
         this.mapToHost()
+    },
+    components: {
+        VDataTable,
     },
     data: () => ({
         search: '',
@@ -66,7 +70,7 @@ export default {
                 key: 'name',
             },
             { title: 'Email', key: 'email' },
-            { title: 'Created at', key: 'createdAt' },
+            { title: 'Created at', key: 'created_at' },
         ],
     }),
     computed: {},

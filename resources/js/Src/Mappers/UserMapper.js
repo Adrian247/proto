@@ -16,7 +16,7 @@ export const userToHost = (user) => {
         uuid,
         name,
         email,
-        createdAt: dateToLocaDate(created_at)
+        created_at: dateToLocaDate(created_at)
     }
 }
 

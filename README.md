@@ -6,7 +6,7 @@
 Plantilla de proyecto Laravel con Vue 3, componentes incluidos
 
 - Laravel 10.
-- Sails
+- Sail
 - Sanctum
 - Vue 3
 - Vuetify
