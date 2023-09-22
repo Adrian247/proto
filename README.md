@@ -12,7 +12,7 @@ Plantilla de proyecto Laravel con Vue 3, componentes incluidos
 - Vuetify
 - Calidad (Php Cs Fixer, Code Sniffer, Mess Detector, Psalm, Php Stan)
 - Pest (Pruebas unitarias)
-- Qodana (Inspección de código)
+- Qodana (Inspección de código JetBrains)
 
 ## Requerimientos
 
